@@ -38,6 +38,12 @@ gem 'jbuilder', '~> 2.5'
 # gem allows Slim instead of erb in the app/views folder
 gem 'slim-rails'
 
+# To use the :country input
+# "please install a country_select plugin, like this one:
+# https://github.com/stefanpenner/country_select"
+# unless builder.respond_to?(:country_select)
+gem 'country_select'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri

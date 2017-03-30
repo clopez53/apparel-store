@@ -1,0 +1,8 @@
+#wrapper
+  h1 All Customers
+
+  ul
+    li = link_to 'From A-Z', alphabetized_customers_path
+
+  ul
+    = render partial: @customers

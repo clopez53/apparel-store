@@ -1,0 +1,43 @@
+// Place all the styles related to the customers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+	background: #D3D3D4;
+
+	#wrapper {
+		width: 1201px;
+		margin: 0px auto;
+	}
+
+	h1 {
+		color: #4d4d4d;
+		padding: 10px;
+	}
+
+	ul {
+		list--style-type: none;
+		display: block;
+
+		li {
+			display: inline;
+		}
+	}
+
+}
+
+
+.customer {
+	width: 350px;
+	border: 1px outset #111;
+	display: inline-block;
+	background: white;
+	margin: 10px;
+	padding: 10px;
+
+
+	h2 {
+		color: #4d4d4d;
+	}
+
+}
