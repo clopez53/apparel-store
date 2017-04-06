@@ -1,9 +1,16 @@
 class Customer < ApplicationRecord
-  validates :first_name,    presence: true
-  validates :last_name,     presence: true
-  validates :phone,         presence: true
-  validates :address,       presence: true
-  validates :email,         presence: true
+  validates :first_name,
+            :last_name,
+            :phone,
+            :address,
+            :city,
+            :email,
+            presence: true
+
+  # validates :postal_code,
+  #           presence: true,
+  #           zipcode: { country_code: :ca, message: 'Postal code is invalid' }
 
   belongs_to :province
+  has_many :orders
 end

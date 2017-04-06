@@ -1,0 +1,9 @@
+h1 Missing Emails
+
+ul
+  li = link_to 'All Customers', root_path
+ul
+  li = link_to 'Customers A-Z', alphabetized_customers_path
+  
+ul
+  = render partial: @customers, collection: @missing_email

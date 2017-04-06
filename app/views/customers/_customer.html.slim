@@ -31,30 +31,36 @@ html
   		strong> Notes:
   		= customer.notes
 
-/ .customer
-/        h2 = customer.full_name
+// Default structure will be kept for backup
+/ doctype html
+/ html
+/   head
+/   .customer
 /
-/        p = image_tag customer.image, height:'200', width:'150'
+/   	h2 = customer.first_name + " " + customer.last_name
 /
-/        p
-/           strong> Province:
-/           = customer.province.blank? ? "None" : customer.province.name
+/   	/ p = image_tag customer.image, height:'200', width:'150'
 /
-/        p
-/           strong> Phone:
-/           = customer.phone_number
+/   	p
+/   		strong> Phone:
+/   		= customer.phone
 /
-/        - unless @customer.email.blank?
-/           p
-/            strong> Email:
-/            = customer.email_address
+/     p
+/   		strong> City:
+/   		= customer.city
 /
-/        - if(customer.notes.nil?)
-/           p
-/            strong> Notes:
-/        - else
-/          p
-/            strong> Notes:
-/            = customer.notes
+/     p
+/       strong> Province:
+/       = customer.province.blank? ? "None" : customer.province.name
 /
-/        p = link_to 'details', customer
+/     p
+/   		strong> Country:
+/   		= customer.country
+/
+/   	p
+/   		strong> Email:
+/   		= customer.email_was
+/
+/   	p
+/   		strong> Notes:
+/   		= customer.notes

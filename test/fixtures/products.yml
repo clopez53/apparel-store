@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: 
+  description: 
+  price: 
+  quantity: 
+  image: 
+  on_sale: false
+
+two:
+  name: 
+  description: 
+  price: 
+  quantity: 
+  image: 
+  on_sale: false

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170330182106) do
+ActiveRecord::Schema.define(version: 20170406065403) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -43,6 +43,12 @@ ActiveRecord::Schema.define(version: 20170330182106) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
+  create_table "categories", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "customers", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
@@ -59,11 +65,57 @@ ActiveRecord::Schema.define(version: 20170330182106) do
     t.index ["province_id"], name: "index_customers_on_province_id"
   end
 
+  create_table "order_items", force: :cascade do |t|
+    t.integer  "quantity"
+    t.decimal  "price"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.decimal  "pst_rate"
+    t.decimal  "gst_rate"
+    t.decimal  "hst_rate"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pages", force: :cascade do |t|
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.decimal  "price"
+    t.integer  "quantity"
+    t.string   "image"
+    t.boolean  "on_sale"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "provinces", force: :cascade do |t|
     t.string   "name"
     t.decimal  "pst"
     t.decimal  "gst"
     t.decimal  "hst"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "statuses", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "subcategories", force: :cascade do |t|
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

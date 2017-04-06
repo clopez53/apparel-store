@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   resources :customers do
     get 'alphabetized' => 'finder#alphabetized', on: :collection
+
+    get 'missing_email' => 'finder#missing_email', on: :collection
   end
 
   devise_for :admin_users, ActiveAdmin::Devise.config
