@@ -38,20 +38,11 @@ gem 'jbuilder', '~> 2.5'
 # gem allows Slim instead of erb in the app/views folder
 gem 'slim-rails'
 
-# Paperclip gem added Mar. 31/17,master from the main paperclip repository
-gem 'paperclip', git: 'git://github.com/thoughtbot/paperclip.git'
-
 # To use the :country input
 # "please install a country_select plugin, like this one:
 # https://github.com/stefanpenner/country_select"
 # unless builder.respond_to?(:country_select)
 gem 'country_select'
-
-# This gem provides a simple and
-# extremely flexible way to upload files from Ruby applications.
-# It works well with Rack based web applications,
-# such as Ruby on Rails.
-gem 'carrierwave', '~> 1.0'
 
 # a gem that tests Ruby projects to ensure that the conform to
 # the Ruby and Rails community style guides.
@@ -84,3 +75,10 @@ gem 'inherited_resources', git: 'https://github.com/activeadmin/inherited_resour
 gem 'activeadmin', git: 'https://github.com/activeadmin/activeadmin'
 
 gem 'devise'
+
+# UPLOADS
+# This gem provides a simple and
+# extremely flexible way to upload files from Ruby applications.
+# It works well with Rack based web applications,
+# such as Ruby on Rails.
+gem 'carrierwave', '~> 1.0'
