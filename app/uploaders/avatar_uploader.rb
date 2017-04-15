@@ -31,7 +31,11 @@ class AvatarUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   version :thumb do
-    process resize_to_limit: [300, 450]
+    process resize_to_limit: [300, 300]
+  end
+
+  version :small do
+    process resize_to_limit: [200, 200]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.
@@ -41,6 +45,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
   end
 
   private
+
   def resize_to_fit(width, height, combine_options: {})
     manipulate! do |img|
       img.combine_options do |cmd|
@@ -57,5 +62,4 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
-
 end

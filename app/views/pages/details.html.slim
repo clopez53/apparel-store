@@ -5,16 +5,21 @@ html
       h1
         = @product.name
 
-      = image_tag @product.image_url(:thumb)
+      p
+        = image_tag @product.image_url(:thumb)
+
       #product-description
         - if !@product.description.nil?
-          = @product.description
+            p
+              strong Description:
+              = @product.description
         - else
           p
-            em No Description
+            strong Description:
+            em None
 
         p
-          strong Category:W
+          strong Category:
           = @product.subcategory.name + "'s " + @product.category.name
         p
           strong Price:

@@ -10,8 +10,11 @@
     = form_tag pages_path, :method => 'get' do
 
       p
+        = text_field_tag :search, params[:search]
         = select_tag :category,  options_from_collection_for_select(@categories, "id", "name", @selected_category), :include_blank => true
         = select_tag :subcategory,  options_from_collection_for_select(@subcategories, "id", "name", @selected_subcategory), :include_blank => true
         = submit_tag "Search"
     ul
       = render partial:'products/product', collection: @products
+
+    = paginate @products

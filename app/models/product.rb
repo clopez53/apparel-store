@@ -19,6 +19,11 @@ class Product < ApplicationRecord
   belongs_to :category
   has_many :order_items
 
-  scope :search_by_category, lambda {|query|where(["category_id LIKE ?", "%#{query}%"])}
-  scope :search_by_subcategory, lambda {|query|where(["subcategory_id LIKE ?", "%#{query}%"])}
+  # scope :search_by_category, lambda { |query| where(['category_id LIKE ?', "%#{query}%"]) }
+  # scope :search_by_subcategory, lambda { |query| where(['subcategory_id LIKE ?', "%#{query}%"]) }
+  scope :search_by_category, lambda { |query| where(['category_id LIKE ?', "%#{query}%"]) }
+  scope :search_by_subcategory, lambda { |query| where(['subcategory_id LIKE ?', "%#{query}%"]) }
+
+  scope :search_by_name, lambda {|query|where(['"products"."name" LIKE ?', "%#{query}%"])}
+  # scope :search_by_name, lambda {|query|where(['"products"."description" LIKE ?', "%#{query}%"])}
 end
