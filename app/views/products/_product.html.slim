@@ -27,6 +27,9 @@ html
         p
           = "*NEW PRODUCT"
 
+    ul
+      li = link_to 'Details', details_path(product.id)
+
 // Default structure will be kept for backup
 / doctype html
 / html

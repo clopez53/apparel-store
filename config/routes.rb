@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'pages/index'
+  get 'pages/details/:id', :to => 'pages#details', :as => :details
 
   get 'pages/alphabetized'
 
@@ -9,11 +10,11 @@ Rails.application.routes.draw do
   # --------------------------------
   root to: 'pages#index'
 
-  resources :pages, path: '/pages', only: [:index]
+  resources :pages#, path: '/pages', only: [:index]
 
   # resources :customers do
   #   get 'alphabetized' => 'finder#alphabetized', on: :collection
-  # 
+  #
   #   get 'missing_email' => 'finder#missing_email', on: :collection
   # end
 
