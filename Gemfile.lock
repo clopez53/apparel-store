@@ -149,6 +149,7 @@ GEM
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
+    mini_magick (4.7.0)
     mini_portile2 (2.1.0)
     minitest (5.10.1)
     money (6.8.2)
@@ -271,7 +272,7 @@ PLATFORMS
 DEPENDENCIES
   activeadmin!
   byebug
-  carrierwave (~> 1.0)
+  carrierwave
   coffee-rails (~> 4.2)
   country_select
   devise
@@ -279,6 +280,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
+  mini_magick
   puma (~> 3.0)
   rails (~> 5.0.2)
   rubocop

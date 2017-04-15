@@ -81,4 +81,5 @@ gem 'devise'
 # extremely flexible way to upload files from Ruby applications.
 # It works well with Rack based web applications,
 # such as Ruby on Rails.
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave'
+gem 'mini_magick'

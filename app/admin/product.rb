@@ -3,6 +3,8 @@ ActiveAdmin.register Product do
                 :description,
                 :price,
                 :quantity,
-                :image,   
-                :on_sale
+                :image,
+                :on_sale,
+                :category_id,
+                :subcategory_id
 end

@@ -1,0 +1,8 @@
+#wrapper
+  h1 Products from A-Z
+
+  ul
+    li = link_to 'All Products', root_path
+
+  ul
+    = render partial: @products, collection: @alphabetized
