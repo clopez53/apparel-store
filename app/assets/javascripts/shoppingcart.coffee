@@ -7,3 +7,6 @@ document.addEventListener 'turbolinks:load', ->
     $('form[id=' + id + ']').submit()
     return
   return
+
+# This will refresh the products and
+# increment shoppingcart cart items for a customer
