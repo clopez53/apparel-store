@@ -8,5 +8,8 @@ document.addEventListener 'turbolinks:load', ->
     return
   return
 
-# This will refresh the products and
-# increment shoppingcart cart items for a customer
+# These turbolinks lets the user
+# add or remove items to the shoppingcart cart items
+# and the above Javascript helps
+# refresh automatically the page for
+# subtotal, GST, PST, or HST and Total
