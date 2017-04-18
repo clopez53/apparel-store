@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+
+  devise_for :customers, controllers: {registrations: "registrations"}
+
+  get "shoppingcart" => "shoppingcart#show"
+  get "shoppingcart/add/:id" => "shoppingcart#add", :as => :add_to_shoppingcart
+  post "shoppingcart/remove/:id" => "shoppingcart#remove", :as => :remove_from_shoppingcart
+  post "shoppingcart/checkout" => "shoppingcart#checkout", :as => :checkout
+  post "shoppingcart/update/:id" => "shoppingcart#update", :as => :order_items_update
+
+
   get 'pages/index'
   get 'pages/details/:id', :to => 'pages#details', :as => :details
 

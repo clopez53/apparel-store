@@ -26,5 +26,6 @@ html
           = number_to_currency @product.price
           / = number_to_currency @product.sell_price * (1-@product.status.des_percentage)
           / = link_to "Add to Card", add_to_cart_path(@product.id)
+        p = link_to "Add to shopping cart", add_to_shoppingcart_path(@product)
 
         p = link_to "Back to All Products", pages_path

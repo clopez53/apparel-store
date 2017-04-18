@@ -9,6 +9,21 @@
   </head>
 
   <body>
+
+    <% if customer_signed_in? %>
+      <p>Hello, <%= current_customer.first_name %> - <%= link_to "Sign Out", destroy_customer_session_path, :method => 'delete' %> <%= link_to "All my orders", "orders_path" %> </p>
+    <% else %>
+      <%= link_to "Sign In", new_customer_session_path %>
+    <% end %>
+    <%= link_to "Home", root_path %>
+    <%= link_to "About Us", "aboutus_path" %>
+    <% if flash[:error].present? %>
+      <div id="error_explanation">
+        <p><%= flash[:error] %></p>
+      </div>
+    <% end %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>

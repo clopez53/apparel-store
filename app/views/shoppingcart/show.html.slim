@@ -1,0 +1,56 @@
+doctype html
+html
+  head
+    h1 Your shoppingcart
+    - unless @shoppingcart.order_items.any?
+      p
+        | You don't have any items in your shoppingcart.
+        = link_to "Go Add Some", root_path
+
+    table width="100%"
+      tr
+        th Product
+        th Quantity
+        th Price
+        th Option
+      - for order_item in @shoppingcart.order_items
+        tr
+          td = order_item.product.name
+          td
+            = form_for order_item, :url => order_items_update_path(order_item), :method => :post do |f|
+              = f.number_field order_item.id, :value => order_item.quantity
+          td = number_to_currency order_item.price
+          td = link_to "Remove", remove_from_shoppingcart_path(order_item), :method => :post
+      tr
+        td Sub Total:
+        td
+        td = number_to_currency @shoppingcart.sub_total
+
+      - if current_customer.province.gst != 0
+        tr
+          td GST:
+          td
+          td = number_to_currency @shoppingcart.gst_total
+      - if current_customer.province.pst != 0
+        tr
+          td PST:
+          td
+          td = number_to_currency @shoppingcart.pst_total
+      - if current_customer.province.hst != 0
+        tr
+          td HST:
+          td
+          td = number_to_currency @shoppingcart.hst_total
+      tr
+        td Total:
+        td
+        td = number_to_currency @shoppingcart.total
+    hr/
+    = form_tag checkout_path, :style => "text-align: right" do |f|
+      article
+        - if flash[:error].present?
+          div #error_explanation
+            p = flash[:error]
+      = link_to "Continue Shopping", root_path
+      or
+      script.stripe-button src="https://checkout.stripe.com/checkout.js" data-amount=(@shoppingcart.total*100).to_i data-description=@description data-key=Rails.configuration.stripe[:publishable_key] data-locale="auto"

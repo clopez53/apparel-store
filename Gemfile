@@ -86,3 +86,5 @@ gem 'mini_magick'
 
 # pagination - limiting products or other kinds of views per page
 gem 'kaminari'
+
+gem 'stripe'
