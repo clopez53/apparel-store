@@ -88,3 +88,6 @@ gem 'mini_magick'
 gem 'kaminari'
 
 gem 'stripe'
+
+# bootstrap and sass (.scss stylesheets) gems
+gem 'bootstrap-sass', '~> 3.3.6'

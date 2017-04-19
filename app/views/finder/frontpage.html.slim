@@ -1,0 +1,300 @@
+doctype html
+html lang="en"
+  head
+    meta charset="utf-8" /
+    meta content="IE=edge" http-equiv="X-UA-Compatible" /
+    meta content="width=device-width, initial-scale=1" name="viewport" /
+    meta content="" name="description" /
+    meta content="" name="author" /
+    title Shop Homepage - Start Bootstrap Template
+    /! Bootstrap Core CSS
+    link href="css/bootstrap.min.css" rel="stylesheet" /
+    /! Custom CSS
+    link href="css/shop-homepage.css" rel="stylesheet" /
+    /! HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    /! WARNING: Respond.js doesn't work if you view the page via file://
+    /![if lt IE 9]
+      | script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" script
+      | script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" script
+  body
+    /! Navigation
+    nav.navbar.navbar-inverse.navbar-fixed-top role="navigation"
+      .container
+        /! Brand and toggle get grouped for better mobile display
+        .navbar-header
+          button.navbar-toggle data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button"
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand href="#"  Start Bootstrap
+        /! Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li
+              a href="#"  About
+            li
+              a href="#"  Services
+            li
+              a href="#"  Contact
+        /! /.navbar-collapse
+      /! /.container
+    /! Page Content
+
+    /! Navigation
+    nav.navbar.navbar-inverse.navbar-fixed-top role="navigation"
+      .container
+        /! Brand and toggle get grouped for better mobile display
+        .navbar-header
+          button.navbar-toggle data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button"
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand href="#"  Start Bootstrap
+        /! Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li
+              a href="#"  About
+            li
+              a href="#"  Vloggers
+            li
+              a href="#"  Contact
+        /! /.navbar-collapse
+      /! /.container
+    /! Page Content
+    .container
+      .row
+        .col-md-3
+          p.lead Shop Name
+          .list-group
+            a.list-group-item href="#"  Category 1
+            a.list-group-item href="#"  Category 2
+            a.list-group-item href="#"  Category 3
+        .col-md-9
+          .row.carousel-holder
+            .col-md-12
+              #carousel-example-generic.carousel.slide data-ride="carousel"
+                ol.carousel-indicators
+                  li.active data-slide-to="0" data-target="#carousel-example-generic"
+                  li data-slide-to="1" data-target="#carousel-example-generic"
+                  li data-slide-to="2" data-target="#carousel-example-generic"
+                .carousel-inner
+                  .item.active
+                    img.slide-image alt="" src="http://placehold.it/800x300" /
+                  .item
+                    img.slide-image alt="" src="http://placehold.it/800x300" /
+                  .item
+                    img.slide-image alt="" src="http://placehold.it/800x300" /
+                a.left.carousel-control data-slide="prev" href="#carousel-example-generic"
+                  span.glyphicon.glyphicon-chevron-left
+                a.right.carousel-control data-slide="next" href="#carousel-example-generic"
+                  span.glyphicon.glyphicon-chevron-right
+          .row
+            .col-sm-4.col-lg-4.col-md-4
+              .thumbnail
+                img alt="" src="http://placehold.it/320x150" /
+                .caption
+                  h4.pull-right $24.99
+                  h4
+                    a href="#"  First Product
+                  p
+                    | See more snippets like this online store item at
+                    = succeed "." do
+                      a href="http://www.bootsnipp.com" target="_blank"  Bootsnipp - http://bootsnipp.com
+                .ratings
+                  p.pull-right 15 reviews
+                  p
+                    span.glyphicon.glyphicon-star
+                    span.glyphicon.glyphicon-star
+                    span.glyphicon.glyphicon-star
+                    span.glyphicon.glyphicon-star
+                    span.glyphicon.glyphicon-star
+            .col-sm-4.col-lg-4.col-md-4
+              .thumbnail
+                img alt="" src="http://placehold.it/320x150" /
+                .caption
+                  h4.pull-right $64.99
+                  h4
+                    a href="#"  Second Product
+                  p This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                .ratings
+                  p.pull-right 12 reviews
+                  p
+                    span.glyphicon.glyphicon-star
+                    span.glyphicon.glyphicon-star
+                    span.glyphicon.glyphicon-star
+                    span.glyphicon.glyphicon-star
+                    span.glyphicon.glyphicon-star-empty
+            .col-sm-4.col-lg-4.col-md-4
+              .thumbnail
+                img alt="" src="http://placehold.it/320x150" /
+                .caption
+                  h4.pull-right $74.99
+                  h4
+                    a href="#"  Third Product
+                  p This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                .ratings
+                  p.pull-right 31 reviews
+                  p
+                    span.glyphicon.glyphicon-star
+                    span.glyphicon.glyphicon-star
+                    span.glyphicon.glyphicon-star
+                    span.glyphicon.glyphicon-star
+                    span.glyphicon.glyphicon-star-empty
+            .col-sm-4.col-lg-4.col-md-4
+              .thumbnail
+                img alt="" src="http://placehold.it/320x150" /
+                .caption
+                  h4.pull-right $84.99
+                  h4
+                    a href="#"  Fourth Product
+                  p This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                .ratings
+                  p.pull-right 6 reviews
+                  p
+                    span.glyphicon.glyphicon-star
+                    span.glyphicon.glyphicon-star
+                    span.glyphicon.glyphicon-star
+                    span.glyphicon.glyphicon-star-empty
+                    span.glyphicon.glyphicon-star-empty
+            .col-sm-4.col-lg-4.col-md-4
+              .thumbnail
+                img alt="" src="http://placehold.it/320x150" /
+                .caption
+                  h4.pull-right $94.99
+                  h4
+                    a href="#"  Fifth Product
+                  p This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                .ratings
+                  p.pull-right 18 reviews
+                  p
+                    span.glyphicon.glyphicon-star
+                    span.glyphicon.glyphicon-star
+                    span.glyphicon.glyphicon-star
+                    span.glyphicon.glyphicon-star
+                    span.glyphicon.glyphicon-star-empty
+            .col-sm-4.col-lg-4.col-md-4
+              h4
+                a href="#"  Like this template?
+              p
+                | If you like this template, then check out
+                a href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/" target="_blank"  this tutorial
+                | on how to build a working review system for your online store!
+              a.btn.btn-primary href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/" target="_blank"  View Tutorial
+    /! /.container
+    .container
+      hr/
+      /! Footer
+      footer
+        .row
+          .col-lg-12
+            p Copyright &copy; Your Website 2014
+    /! /.container
+    /! jQuery
+    script src="js/jquery.js"
+    /! Bootstrap Core JavaScript
+    script src="js/bootstrap.min.js"
+
+
+    doctype html
+    html
+      head
+      .customer
+
+      	h2 = customer.first_name + " " + customer.last_name
+
+      	/ p = image_tag customer.image, height:'200', width:'150'
+
+      	p
+      		strong> Phone:
+      		= customer.phone
+
+        p
+      		strong> City:
+      		= customer.city
+
+        p
+          strong> Province:
+          = customer.province.blank? ? "None" : customer.province.name
+
+        p
+      		strong> Country:
+      		= customer.country
+
+      	p
+      		strong> Email:
+      		= customer.email_was
+
+      	p
+      		strong> Notes:
+      		= customer.notes
+
+
+
+    // Default structure will be kept for backup
+    / doctype html
+    / html
+    /   head
+    /   .customer
+    /
+    /   	h2 = customer.first_name + " " + customer.last_name
+    /
+    /   	/ p = image_tag customer.image, height:'200', width:'150'
+    /
+    /   	p
+    /   		strong> Phone:
+    /   		= customer.phone
+    /
+    /     p
+    /   		strong> City:
+    /   		= customer.city
+    /
+    /     p
+    /       strong> Province:
+    /       = customer.province.blank? ? "None" : customer.province.name
+    /
+    /     p
+    /   		strong> Country:
+    /   		= customer.country
+    /
+    /   	p
+    /   		strong> Email:
+    /   		= customer.email_was
+    /
+    /   	p
+    /   		strong> Notes:
+    /   		= customer.notes
+
+    doctype html
+    html
+      head
+      .product
+
+      	h2 = product.name
+
+      	p = image_tag product.image_url(:thumb)
+
+      	p
+      		strong> Description:
+      		= product.description
+
+        p
+      		strong> Price:
+      		= number_to_currency product.price
+
+        p
+          strong> Quantity:
+          = product.quantity==0 ? "Out of Stock" : product.quantity
+
+
+        - if (product.on_sale)
+            p
+              = "On Sale"
+        - else
+            p
+              = "*NEW PRODUCT"
+
+        ul
+          li = link_to 'Details', details_path(product.id)

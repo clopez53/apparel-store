@@ -1,4 +1,34 @@
+
+.container
+  .row
+    .col-md-3
+      p.lead Shop Name
+      .list-group
+        a.list-group-item href="#"  Men's
+        a.list-group-item href="#"  Women's
+        a.list-group-item href="#"  New
+        a.list-group-item href="#"  On Sale
+    .col-md-9
+      .row.carousel-holder
+        .col-md-12
+          #carousel-example-generic.carousel.slide data-ride="carousel"
+            ol.carousel-indicators
+              li.active data-slide-to="0" data-target="#carousel-example-generic"
+              li data-slide-to="1" data-target="#carousel-example-generic"
+              li data-slide-to="2" data-target="#carousel-example-generic"
+            .carousel-inner
+              .item.active
+                img.slide-image alt="" src="http://placehold.it/800x300" /
+              .item
+                img.slide-image alt="" src="http://placehold.it/800x300" /
+              .item
+                img.slide-image alt="" src="http://placehold.it/800x300" /
+            a.left.carousel-control data-slide="prev" href="#carousel-example-generic"
+              span.glyphicon.glyphicon-chevron-left
+            a.right.carousel-control data-slide="next" href="#carousel-example-generic"
+              span.glyphicon.glyphicon-chevron-right
 #wrapper
+
   h1 All Products
 
   ul
@@ -6,15 +36,30 @@
 
 
 
-  div
-    = form_tag pages_path, :method => 'get' do
+    div
+      = form_tag pages_path, :method => 'get' do
 
-      p
-        = text_field_tag :search, params[:search]
-        = select_tag :category,  options_from_collection_for_select(@categories, "id", "name", @selected_category), :include_blank => true
-        = select_tag :subcategory,  options_from_collection_for_select(@subcategories, "id", "name", @selected_subcategory), :include_blank => true
-        = submit_tag "Search"
-    ul
-      = render partial:'products/product', collection: @products
+        p
+          = text_field_tag :search, params[:search]
+          = select_tag :category,  options_from_collection_for_select(@categories, "id", "name", @selected_category), :include_blank => true
+          = select_tag :subcategory,  options_from_collection_for_select(@subcategories, "id", "name", @selected_subcategory), :include_blank => true
+          = submit_tag "Search"
+      div.row
+        = render partial: 'products/product', collection: @products
 
-    = paginate @products
+      = paginate @products
+
+
+/! /.container
+.container
+  hr/
+  /! Footer
+  footer
+    .row
+      .col-lg-12
+        p Copyright &copy; Your Website 2014
+/! /.container
+/! jQuery
+script src="js/jquery.js"
+/! Bootstrap Core JavaScript
+script src="js/bootstrap.min.js"

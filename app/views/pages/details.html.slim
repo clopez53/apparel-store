@@ -1,31 +1,46 @@
 doctype html
 html
   head
-  .product
-      h1
-        = @product.name
 
-      p
-        = image_tag @product.image_url(:thumb)
+    .product
+        h1
+          = @product.name
 
-      #product-description
-        - if !@product.description.nil?
+        p
+          = image_tag @product.image_url(:thumb)
+
+        #product-description
+          - if !@product.description.nil?
+              p
+                strong Description:
+                = @product.description
+          - else
             p
               strong Description:
-              = @product.description
-        - else
+              em None
+
           p
-            strong Description:
-            em None
+            strong Category:
+            = @product.subcategory.name + "'s " + @product.category.name
+          p
+            strong Price:
+            = number_to_currency @product.price
+            / = number_to_currency @product.sell_price * (1-@product.status.des_percentage)
+            / = link_to "Add to Card", add_to_cart_path(@product.id)
+          p = link_to "Add to shopping cart", add_to_shoppingcart_path(@product)
 
-        p
-          strong Category:
-          = @product.subcategory.name + "'s " + @product.category.name
-        p
-          strong Price:
-          = number_to_currency @product.price
-          / = number_to_currency @product.sell_price * (1-@product.status.des_percentage)
-          / = link_to "Add to Card", add_to_cart_path(@product.id)
-        p = link_to "Add to shopping cart", add_to_shoppingcart_path(@product)
+          p = link_to "Back to All Products", pages_path
 
-        p = link_to "Back to All Products", pages_path
+  /! /.container
+  .container
+    hr/
+    /! Footer
+    footer
+      .row
+        .col-lg-12
+          p Copyright &copy; Your Website 2014
+  /! /.container
+  /! jQuery
+  script src="js/jquery.js"
+  /! Bootstrap Core JavaScript
+  script src="js/bootstrap.min.js"

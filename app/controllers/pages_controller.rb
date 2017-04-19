@@ -32,6 +32,14 @@ class PagesController < ApplicationController
     @products = Product.order(:name)
   end
 
+  def products_on_sale
+    @products = Product.where(on_sale: :true)
+  end
+
+  def products_new
+    @products = Product.where(on_sale: :false)
+  end
+
   # define more searches:
 
   # then by men and women's clothing
