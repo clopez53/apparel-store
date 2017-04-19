@@ -7,7 +7,7 @@ ActiveAdmin.register_page "Dashboard" do
     columns do
       column do
         panel "Recent Orders" do
-          #only the placed order will show
+          # only the placed order will show
           # table_for Order.where('status_id > 2').order('id desc').limit(10) do
           table_for Order.where('status_id is not null').order('id desc').limit(10) do
             column("State")   {|order| status_tag(Status.find(order.status_id.nil? ? 2 : order.status_id).name)}
