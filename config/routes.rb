@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   post "shoppingcart/checkout" => "shoppingcart#checkout", :as => :checkout
   post "shoppingcart/update/:id" => "shoppingcart#update", :as => :order_items_update
 
-
   get 'pages/index'
   get 'pages/details/:id', :to => 'pages#details', :as => :details
 
@@ -17,10 +16,11 @@ Rails.application.routes.draw do
   # root to: 'finder#index'
   # resources :finder, path: '/customers', only: [:index]
   # changed to view products instead
+  # views/pages/index.html.slim using _product.html.slim partial
   # --------------------------------
   root to: 'pages#index'
 
-  resources :pages#, path: '/pages', only: [:index]
+  resources :pages #, path: '/pages', only: [:index]
 
   # resources :customers do
   #   get 'alphabetized' => 'finder#alphabetized', on: :collection

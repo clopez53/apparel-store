@@ -14,7 +14,7 @@ class Order < ApplicationRecord
   belongs_to :status
   has_many :order_items
 
-  scope :in_progress, ->{ where("orders.status_id = 2") }
+  scope :in_progress, -> { where("orders.status_id = 2") }
   scope :placed, -> { where("orders.status_id = 3") }
   scope :shipped, -> { where("orders.status_id = 4") }
   scope :cancelled, -> { where("orders.status_id = 6") }

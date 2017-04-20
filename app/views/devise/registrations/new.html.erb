@@ -10,7 +10,7 @@
 
   <div class="field">
     <%= f.label :last_name %><br />
-    <%= f.text_field :last_name%>
+    <%= f.text_field :last_name %>
   </div>
 
   <div class="field">
@@ -20,7 +20,7 @@
 
   <div class="field">
     <%= f.label :province_id %><br />
-    <!-- 3.1.4        Sign up for an account with a username and password so 
+    <!-- 3.1.4        Sign up for an account with a username and password so
     that my address details can be saved to simplify future orders.
     Customer’s addresses must be associated with your provinces table. -->
     <%= f.select(:province_id, options_from_collection_for_select(@provinces, "id", "name", 0), :include_blank => true)%>

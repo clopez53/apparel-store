@@ -2,6 +2,7 @@ class ShoppingcartController < ApplicationController
   before_filter :find_shoppingcart
   before_action :authenticate_customer!
 
+  # After item is added the page redirected back to shopping cart page
   def add
     @shoppingcart.save if @shoppingcart.new_record?
     session[:shoppingcart_id] = @shoppingcart.id
@@ -13,6 +14,7 @@ class ShoppingcartController < ApplicationController
     redirect_to '/shoppingcart'
   end
 
+  # After item is removed the page redirected back to shopping cart page
   def remove
     item = @shoppingcart.order_items.find(params[:id])
     item.destroy
@@ -40,7 +42,7 @@ class ShoppingcartController < ApplicationController
     end
 
     session.delete(:shoppingcart_id)
-    flash[:notice] = "Thank you for your purchase! We will ship it shortly!"
+    flash[:notice] = "Thank you for your purchase! We are starting to process your order for shipping!"
     redirect_to root_path
   rescue Stripe::CardError => e
     flash[:error] = e.message

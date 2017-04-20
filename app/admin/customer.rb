@@ -22,8 +22,6 @@ ActiveAdmin.register Customer do
                 :notes,
                 :province_id
 
-
-
   show :title => :email do
     panel "Order History" do
       table_for(customer.orders) do

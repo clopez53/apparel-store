@@ -34,8 +34,6 @@
   ul
     li = link_to 'From A-Z', alphabetized_products_path
 
-
-
     div
       = form_tag pages_path, :method => 'get' do
 
@@ -48,7 +46,6 @@
         = render partial: 'products/product', collection: @products
 
       = paginate @products
-
 
 /! /.container
 .container
